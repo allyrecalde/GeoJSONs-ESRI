@@ -5,7 +5,6 @@ def display_menu():
     print('2. Decode\n')
     print('3. Quit\n')
 
-
 def encode(password):
     encoded = ''
     for char in password:
@@ -26,11 +25,10 @@ while option != 3:
     display_menu()
     option = int(input('Please enter an option: \n'))
 
-
     if option == 1:
         password = input('Please enter your password to encode: \n')
         if len(password) != 8 or not password.isdigit:
-            print('Invalid password. Must be 8 digits long consisting of only integers')
+            print('Invalid password')
         else:
             password1 = encode(password)
             print('Your password has been encoded and stored!\n')
@@ -40,7 +38,7 @@ while option != 3:
     elif option == 3:
         break
     else:
-        print('Invalid option')
+        print('Invalid option, please select option 1, 2, or 3.')
 
 
 
