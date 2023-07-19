@@ -9,14 +9,14 @@ def display_menu():
 def encode(password):
     encoded = ''
     for char in password:
-        encoded += str(int(char) + 3) #make each character in password and integer, then add them together into a string
+        encoded += str(int(char) + 3 % 10) #make each character in password and integer, then add them together into a string
     return encoded #return string
 
 def decode(password):
-    decoded = ''
-    for char in password:
-        decoded += str(int(char) - 3) #make each character an int() and subtract 3 to get original inputted password
-    return decoded # return concatenated string
+        decoded = ''
+        for char in password:
+            decoded += str(int(char) - 3 % 10)
+            return decoded
 
 password = '' #start password as empty string
 option = 0 # starting off point
